@@ -11,8 +11,9 @@ const SelectedDino = (props) => {
 
   const getFoodText = (foodCost, carnivore) => {
     const baseWord = carnivore ? "goat" : "tree";
+    const wordEnding = foodCost === 1 ? "" : "s";
 
-    return foodCost + " " + baseWord + (foodCost === 1 ? "" : "s");
+    return foodCost + " " + baseWord + wordEnding;
   };
 
   return (
